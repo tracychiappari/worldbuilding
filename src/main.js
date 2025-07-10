@@ -3,12 +3,16 @@ import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls.js'
 
 import {getMoon, getPlanet, getSun} from "./meshes";
 import {toDegrees, toRadians} from "./helpers";
+import {getStarfield} from "./particles";
 
 // Canvas
 const canvas = document.querySelector('canvas.webgl');
 
 // Scene
 const scene = new THREE.Scene();
+
+const starfield = getStarfield();
+scene.add(starfield);
 
 // Flat Planet
 const planet = getPlanet();
