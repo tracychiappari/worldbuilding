@@ -9,16 +9,17 @@ export const getPlanet = () => {
         new THREE.CircleGeometry(1, 360),
         new THREE.MeshStandardMaterial({color: 0x004400, side: THREE.DoubleSide})
     )
+    mesh.castShadow = true
     group.add(mesh)
 
     const sphere = new THREE.Mesh(
         new THREE.SphereGeometry(1, 32, 32,0, toRadians(180)),
         new THREE.MeshStandardMaterial({color: 0x2e2927, side: THREE.DoubleSide})
     )
+    sphere.castShadow = true
     group.add(sphere)
 
     group.rotation.x = toRadians(90)
-    group.castShadow = true
 
     return group;
 }
