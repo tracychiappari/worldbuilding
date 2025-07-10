@@ -85,7 +85,7 @@ const sunOrbit = {
 }
 
 const moonOrbit = {
-    radius: 3,
+    radius: -3,
     azimuth: 45,
     increment: 4,
     altitude: 0,
@@ -133,7 +133,7 @@ const tick = () =>
     sun.position.set(sunOrbit.x, sunOrbit.y, sunOrbit.z)
 
     // Moon Orbit
-    moonOrbit.altitude = elapsedTime + toRadians(180)
+    moonOrbit.altitude = -(elapsedTime + toRadians(180))
 
     moonOrbit.x = moonOrbit.radius * Math.sin(moonOrbit.altitude) * Math.cos(toRadians(moonOrbit.azimuth))
     moonOrbit.y = moonOrbit.radius * Math.sin(moonOrbit.altitude) * Math.sin(toRadians(moonOrbit.azimuth))
