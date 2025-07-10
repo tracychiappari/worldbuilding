@@ -38,7 +38,7 @@ export const getSun = () => {
     group.add(mesh)
 
     // Point Light / Sunlight
-    const light = new THREE.PointLight(0xffffff, 2, 50, 0);
+    const light = new THREE.PointLight(0xffffff, 3, 50, 0);
 
     light.castShadow = true;
 
@@ -63,7 +63,7 @@ export const getMoon = () => {
 
     const mesh = new THREE.Mesh(
         new THREE.SphereGeometry(0.1, 32, 32),
-        new THREE.MeshStandardMaterial({color: 0x0000ff})
+        new THREE.MeshStandardMaterial({color: 0xaaaaaa})
     )
 
     mesh.receiveShadow = true
@@ -71,7 +71,7 @@ export const getMoon = () => {
     group.add(mesh)
 
     // Point Light / Moonlight
-    const light = new THREE.PointLight(0x0000ff, 1, 50, 0);
+    const light = new THREE.PointLight(0xaaaacc, 0.75, 50, 0);
 
     light.castShadow = true;
 
